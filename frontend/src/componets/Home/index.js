@@ -35,7 +35,7 @@ class Home extends Component {
 
     loadTransactions = async (previous = false) => {
         try {
-            const response = await axios.get(`http://localhost:5000/list-transactions?month=${this.state.month}&search_text=${this.state.searchText}&page=${previous ? this.state.page - 1 : this.state.page}`);
+            const response = await axios.get(`https://transactionpages.onrender.com/list-transactions?month=${this.state.month}&search_text=${this.state.searchText}&page=${previous ? this.state.page - 1 : this.state.page}`);
             this.setState({ transactions: response.data.transactions });
         } catch (error) {
             console.error(error);
@@ -44,7 +44,7 @@ class Home extends Component {
 
     loadStatistics = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/statistics?month=${this.state.month}`);
+            const response = await axios.get(`https://transactionpages.onrender.com/statistics?month=${this.state.month}`);
             this.setState({ statistics: response.data });
         } catch (error) {
             console.error(error);
@@ -53,7 +53,7 @@ class Home extends Component {
 
     loadBarChartData = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/bar-chart?month=${this.state.month}`);
+            const response = await axios.get(`https://transactionpages.onrender.com/bar-chart?month=${this.state.month}`);
             this.setState({ barChartData: response.data.bar_chart_data });
         } catch (error) {
             console.error(error);
@@ -62,7 +62,7 @@ class Home extends Component {
 
     loadPieChartData = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/pie-chart?month=${this.state.month}`);
+            const response = await axios.get(`https://transactionpages.onrender.com/pie-chart?month=${this.state.month}`);
             this.setState({ pieChartData: response.data.pie_chart_data });
         } catch (error) {
             console.error(error);
@@ -71,7 +71,7 @@ class Home extends Component {
 
     loadCombinedData = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/combined-response?month=${this.state.month}`);
+            const response = await axios.get(`https://transactionpages.onrender.com/combined-response?month=${this.state.month}`);
             console.log('Combined Response:', response.data);
             this.loadTransactions();
 
