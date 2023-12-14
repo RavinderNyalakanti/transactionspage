@@ -84,18 +84,17 @@ option {
     width: 90%;
     margin: auto;
     border-radius: 5px;
-
+   margin-top: 50px;
 }
 
 table,
 th,
-td {
-    border: 3px solid rgba(204, 128, 14, 0.968);
+td { 
+   
+    border: 2px solid rgba(31, 19, 2, 0.968);
     border-collapse: collapse;
-    border-radius: 10px;
-
-
-
+    border-radius: 10px; 
+    background-color: rgb(251, 241, 175);
 }
 
 .dataTable4 {
@@ -106,7 +105,7 @@ td {
 }
 
 .sContainer {
-    background-color: rgb(133, 133, 170);
+    background-color: rgb(209, 235, 238);
     padding: 40px;
     width: 90%;
     display: flex;
@@ -123,7 +122,7 @@ td {
 }
 
 .disignStyle {
-    background-color: rgb(181, 164, 16);
+    background-color: rgb(246, 239, 180);
     width: 40%;
     padding: 20px;
     text-align: center;
